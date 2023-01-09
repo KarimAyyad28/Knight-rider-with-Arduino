@@ -1,7 +1,5 @@
-#include <SPI.h>
 void setup() {
 
-  Serial.begin(9600);
   pinMode(2, OUTPUT);
   pinMode(3, OUTPUT);
   pinMode(4, OUTPUT);
@@ -15,7 +13,6 @@ void setup() {
 void loop() {
   // connecting a potentiometer as an input on analog pin A0
   int time = analogRead(A0);
-  Serial.print (time);
   // loop from the lowest pin to the highest:
   for (int pin = 2; pin <= 6; pin++)
   { digitalWrite(pin, HIGH);
